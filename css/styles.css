@@ -1,12 +1,12 @@
 :root {
-  --bg: #050505;
-  --surface: #121212;
-  --surface-2: #1a1a1a;
-  --accent: #8a2be2;
-  --accent-dim: #6a1fb2;
-  --accent-glow: rgba(138, 43, 226, 0.15);
-  --text: #f0f0f0;
-  --text-muted: #888;
+  --bg: #faf7f0;
+  --surface: #ffffff;
+  --surface-2: #f5efe2;
+  --accent: #c9a227;
+  --accent-dim: #a8841c;
+  --accent-glow: rgba(201, 162, 39, 0.12);
+  --text: #2b2520;
+  --text-muted: #8a7f6e;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
@@ -33,13 +33,13 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-dim);
   text-decoration: none;
   transition: color var(--transition);
 }
 
 a:hover {
-  color: #b06aff;
+  color: var(--accent);
 }
 
 img {
@@ -67,12 +67,12 @@ input, textarea, select, button {
 }
 
 #error a {
-  color: var(--accent);
+  color: var(--accent-dim);
 }
 
 nav, header {
   background-color: var(--surface);
-  border-bottom: 1px solid #1f1f1f;
+  border-bottom: 1px solid #ece4d3;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -102,7 +102,7 @@ nav a:hover, header a:hover {
   align-items: center;
   justify-content: center;
   background: var(--accent);
-  color: #fff;
+  color: #fffaf0;
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.6rem 1.4rem;
@@ -123,7 +123,7 @@ nav a:hover, header a:hover {
   justify-content: center;
   background: transparent;
   color: var(--text-muted);
-  border: 1px solid #2a2a2a;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   padding: 0.6rem 1.4rem;
   font-size: 0.95rem;

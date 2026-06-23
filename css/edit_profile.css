@@ -27,8 +27,8 @@
 }
 
 .input-group input[type="text"] {
-  background: #0d0d0d;
-  border: 1px solid #222;
+  background: #fcfaf5;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   color: var(--text);
   padding: 0.65rem 0.9rem;
@@ -43,8 +43,8 @@
 }
 
 .input-group textarea {
-  background: #0d0d0d;
-  border: 1px solid #222;
+  background: #fcfaf5;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   color: var(--text);
   padding: 0.65rem 0.9rem;
@@ -64,12 +64,12 @@
 
 .input-group textarea::placeholder,
 .input-group input::placeholder {
-  color: #444;
+  color: #b5a98a;
 }
 
 .input-group input[type="file"] {
-  background: #0d0d0d;
-  border: 1px dashed #2a2a2a;
+  background: #fcfaf5;
+  border: 1px dashed #d8cca8;
   border-radius: var(--radius-sm);
   color: var(--text-muted);
   padding: 0.65rem 0.9rem;
@@ -87,7 +87,7 @@
   background: var(--accent-glow);
   border: none;
   border-radius: calc(var(--radius-sm) - 2px);
-  color: var(--accent);
+  color: var(--accent-dim);
   padding: 0.3rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -97,7 +97,7 @@
 }
 
 .input-group input[type="file"]::file-selector-button:hover {
-  background: rgba(138, 43, 226, 0.25);
+  background: rgba(201, 162, 39, 0.25);
 }
 
 .form-actions {

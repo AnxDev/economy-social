@@ -6,6 +6,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 include '../backend/db.php';
+/** @var mysqli $conn */
 $postId = $_GET['id'];
 $user_id = $_SESSION['id'];
 
@@ -18,10 +19,10 @@ $query = "SELECT posts.*, users.username, users.id AS user_id_record,
               WHERE posts.id = ?
               ORDER BY posts.id DESC";
 
-    $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, "ii", $user_id, $postId);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
+$stmt = mysqli_prepare($conn, $query);
+mysqli_stmt_bind_param($stmt, "ii", $user_id, $postId);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);   
 if (mysqli_num_rows($result) == 0) {
     echo "<p id='error'>Post non trovato</p>";
     exit();

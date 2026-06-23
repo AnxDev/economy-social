@@ -1,7 +1,7 @@
 <style>
 header {
     background: var(--surface);
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #ece4d3;
     padding: 0.6rem 0;
     position: sticky;
     top: 0;
@@ -11,19 +11,18 @@ header {
 header nav ul {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Forza la separazione */
+    justify-content: space-between;
     list-style: none;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* BLOCCO SINISTRO: Link */
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    flex: 1; /* Prende lo spazio necessario senza spingere troppo */
+    flex: 1;
 }
 
 header nav ul li a {
@@ -36,24 +35,33 @@ header nav ul li a {
     white-space: nowrap;
 }
 
-header nav ul li a.current {
+header nav ul li a:hover {
     background: var(--accent-glow);
-    color: var(--accent);
+    color: var(--text);
 }
 
-/* BLOCCO DESTRO: Ricerca */
+header nav ul li a.current {
+    background: var(--accent-glow);
+    color: var(--accent-dim);
+}
+
 .search-item {
-    flex: 0 0 auto; /* Non cresce, non rimpicciolisce */
-    width: 180px;   /* Larghezza fissa e contenuta */
+    flex: 0 0 auto;
+    width: 180px;
 }
 
 .search-form {
     display: flex;
     align-items: center;
-    background: #0d0d0d;
-    border: 1px solid #222;
+    background: #fcfaf5;
+    border: 1px solid #e0d6bf;
     border-radius: var(--radius-sm);
     padding: 0.2rem 0.5rem;
+    transition: border-color var(--transition);
+}
+
+.search-form:focus-within {
+    border-color: var(--accent);
 }
 
 .search-form input {
@@ -66,10 +74,22 @@ header nav ul li a.current {
     width: 100%;
 }
 
-/* --- RESPONSIVE --- */
+.search-form input::placeholder {
+    color: #b5a98a;
+}
+
+.search-btn {
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.search-btn:hover {
+    color: var(--accent-dim);
+}
+
 @media (max-width: 650px) {
     header nav ul {
-        flex-direction: column; /* Link sopra, Ricerca sotto */
+        flex-direction: column;
         gap: 0.8rem;
     }
 

@@ -22,7 +22,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #0d0d0d;
+  background: #f5efe2;
 }
 
 .feed-cover img {
@@ -64,7 +64,7 @@
 }
 
 .feed-info p a {
-  color: var(--accent);
+  color: var(--accent-dim);
 }
 
 .actions-container {
@@ -72,10 +72,9 @@
   align-items: center;
   gap: 0.8rem;
   flex-shrink: 0;
-  margin-left: auto; /* Spinge tutto a destra */
+  margin-left: auto;
 }
 
-/* Stile base per entrambi i container dei tasti */
 .like-container,
 .comment-container {
   display: flex;
@@ -85,12 +84,10 @@
 .like-btn svg {
   width: 20px;
   height: 20px;
-  /* Se lo sfondo è nero, assicurati che il colore di base sia visibile */
-  fill: var(--text-muted, #666); 
+  fill: var(--text-muted, #8a7f6e);
   transition: fill var(--transition), transform 0.15s ease;
   display: block;
 }
-/* Tasti Azione (Like & Comment) */
 .like-btn,
 .comment-btn {
   background: none;
@@ -102,7 +99,7 @@
   align-items: center;
   justify-content: center;
   transition: background var(--transition), transform 0.2s ease;
-  text-decoration: none; /* Per il tag <a> del commento */
+  text-decoration: none;
 }
 
 .like-btn:hover,
@@ -110,12 +107,11 @@
   background: var(--accent-glow);
 }
 
-/* Icona Commento Minimal (Glow) */
 .comment-btn svg {
   width: 20px;
   height: 20px;
-  fill: none; /* Il commento di solito è solo contorno */
-  stroke: var(--text-muted, #666);
+  fill: none;
+  stroke: var(--text-muted, #8a7f6e);
   stroke-width: 2;
   display: block;
   transition: stroke var(--transition), filter var(--transition);
@@ -123,15 +119,13 @@
 
 .comment-btn:hover svg {
   stroke: var(--accent);
-  filter: drop-shadow(0 0 5px var(--accent));
+  filter: drop-shadow(0 0 5px var(--accent-glow));
 }
 
-/* Animazione al click */
 .comment-btn:active {
   transform: scale(0.9);
 }
 
-/* Conteggi */
 .like-count,
 .comment-count {
   font-size: 0.85rem;
@@ -140,10 +134,9 @@
   min-width: 1ch;
 }
 .like-btn.liked svg {
-  fill: var(--accent); /* Il tuo viola */
-  filter: drop-shadow(0 0 5px var(--accent));
+  fill: var(--accent);
+  filter: drop-shadow(0 0 5px var(--accent-glow));
 }
-/* Media Query specifica per icone leggermente più grandi su mobile se necessario */
 @media (max-width: 600px) {
   .actions-container {
     gap: 0.5rem;

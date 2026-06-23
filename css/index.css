@@ -12,7 +12,7 @@ body > h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  background: linear-gradient(135deg, #f0f0f0 40%, var(--accent));
+  background: linear-gradient(135deg, #2b2520 40%, var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -34,13 +34,14 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  box-shadow: 0 15px 35px rgba(43, 37, 32, 0.1);
 }
 
 form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
-  background: #0d0d0d;
-  border: 1px solid #222;
+  background: #fcfaf5;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   color: var(--text);
   padding: 0.7rem 1rem;
@@ -57,12 +58,12 @@ form input[type="password"]:focus {
 }
 
 form input::placeholder {
-  color: #444;
+  color: #b5a98a;
 }
 
 form input[type="submit"] {
   background: var(--accent);
-  color: #fff;
+  color: #fffaf0;
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
@@ -86,12 +87,12 @@ form + h3 {
 }
 
 form + h3 a {
-  color: var(--accent);
+  color: var(--accent-dim);
   font-weight: 500;
 }
 
 form + h3 a:hover {
-  color: #b06aff;
+  color: var(--accent);
 }
 
 @media (max-width: 420px) {

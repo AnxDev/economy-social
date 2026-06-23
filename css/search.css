@@ -29,7 +29,7 @@ h2 em {
   color: var(--text-muted);
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #1c1c1c;
+  border-bottom: 1px solid #ece4d3;
 }
 
 .search-result-item {

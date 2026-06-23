@@ -28,8 +28,8 @@
 }
 
 .input-group input[type="text"] {
-  background: #0d0d0d;
-  border: 1px solid #222;
+  background: #fcfaf5;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   color: var(--text);
   padding: 0.65rem 0.9rem;
@@ -52,8 +52,8 @@
 }
 
 #preview-container {
-  background: #0d0d0d;
-  border: 1px dashed #2a2a2a;
+  background: #fcfaf5;
+  border: 1px dashed #d8cca8;
   border-radius: var(--radius-md);
   min-height: 200px;
   display: flex;

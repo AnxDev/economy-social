@@ -18,7 +18,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #0d0d0d;
+  background: #f5efe2;
 }
 
 .post-cover img {
@@ -46,7 +46,7 @@
 }
 
 .post-info > p a {
-  color: var(--accent);
+  color: var(--accent-dim);
 }
 
 .post-info > p:nth-child(2) {
@@ -54,19 +54,19 @@
   letter-spacing: 0.02em;
 }
 
-.post-info > form {
+.post-info form {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
   margin-top: 0.75rem;
   padding-top: 1rem;
-  border-top: 1px solid #1c1c1c;
+  border-top: 1px solid #ece4d3;
 }
 
-.post-info > form textarea,
+.post-info form textarea,
 .reply-form textarea {
-  background: #0d0d0d;
-  border: 1px solid #222;
+  background: #fcfaf5;
+  border: 1px solid #e0d6bf;
   border-radius: var(--radius-sm);
   color: var(--text);
   padding: 0.65rem 0.9rem;
@@ -78,23 +78,24 @@
   min-height: 80px;
   transition: border-color var(--transition);
   width: 100%;
+  display: block;
 }
 
-.post-info > form textarea:focus,
+.post-info form textarea:focus,
 .reply-form textarea:focus {
   border-color: var(--accent);
 }
 
-.post-info > form textarea::placeholder,
+.post-info form textarea::placeholder,
 .reply-form textarea::placeholder {
-  color: #444;
+  color: #b5a98a;
 }
 
-.post-info > form button[type="submit"],
+.post-info form button[type="submit"],
 .reply-form button[type="submit"] {
   align-self: flex-end;
   background: var(--accent);
-  color: #fff;
+  color: #fffaf0;
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.5rem 1.25rem;
@@ -104,7 +105,7 @@
   transition: background var(--transition), transform var(--transition);
 }
 
-.post-info > form button[type="submit"]:hover,
+.post-info form button[type="submit"]:hover,
 .reply-form button[type="submit"]:hover {
   background: var(--accent-dim);
   transform: translateY(-1px);
@@ -119,7 +120,7 @@
 
 .comment-card {
   padding: 1rem 0;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid #ece4d3;
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
@@ -131,7 +132,7 @@
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #e0d6bf;
   flex-shrink: 0;
 }
 
@@ -144,19 +145,19 @@
 
 .comment-card > p a,
 .reply-card > p a {
-  color: var(--accent);
+  color: var(--accent-dim);
   font-weight: 500;
 }
 
 .comment-card > p:first-of-type {
   font-size: 0.72rem;
-  color: #444;
+  color: #b5a98a;
 }
 
 .replies-container {
   margin-left: 0 !important;
   padding-left: 1rem;
-  border-left: 2px solid #1e1e1e;
+  border-left: 2px solid #ece4d3;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -168,7 +169,7 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 0.75rem 0.9rem;
-  background: #0d0d0d;
+  background: #fcfaf5;
   border-radius: var(--radius-sm);
 }
 
@@ -180,11 +181,11 @@
 
 .reply-card > p:first-of-type {
   font-size: 0.7rem;
-  color: #444;
+  color: #b5a98a;
 }
 
 .reply-card > p a {
-  color: var(--accent);
+  color: var(--accent-dim);
   font-weight: 500;
 }
 
@@ -208,17 +209,17 @@
 }
 
 .reply-btn:hover {
-  color: var(--accent);
+  color: var(--accent-dim);
 }
 
 .delete-btn {
   font-size: 0.75rem;
-  color: #555;
+  color: #b5a98a;
   transition: color var(--transition);
 }
 
 .delete-btn:hover {
-  color: #e05252;
+  color: #c0392b;
 }
 
 .reply-form {
@@ -227,9 +228,9 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   padding: 0.9rem;
-  background: #0d0d0d;
+  background: #fcfaf5;
   border-radius: var(--radius-sm);
-  border: 1px solid #1e1e1e;
+  border: 1px solid #ece4d3;
 }
 
 hr {
@@ -244,12 +245,10 @@ hr {
 .like-btn svg {
   width: 20px;
   height: 20px;
-  /* Se lo sfondo è nero, assicurati che il colore di base sia visibile */
-  fill: var(--text-muted, #666); 
+  fill: var(--text-muted, #8a7f6e);
   transition: fill var(--transition), transform 0.15s ease;
   display: block;
 }
-/* Tasti Azione (Like & Comment) */
 .like-btn,
 .comment-btn {
   background: none;
@@ -261,7 +260,7 @@ hr {
   align-items: center;
   justify-content: center;
   transition: background var(--transition), transform 0.2s ease;
-  text-decoration: none; /* Per il tag <a> del commento */
+  text-decoration: none;
 }
 
 .like-btn:hover,
@@ -269,12 +268,14 @@ hr {
   background: var(--accent-glow);
 }
 
-/* Icona Commento Minimal (Glow) */
-.comment-btn svg {
+.comment-btn svg,
+.comment-btn svg.comment-icon-glow {
   width: 20px;
   height: 20px;
-  fill: none; /* Il commento di solito è solo contorno */
-  stroke: var(--text-muted, #666);
+  max-width: 20px;
+  max-height: 20px;
+  fill: none;
+  stroke: var(--text-muted, #8a7f6e);
   stroke-width: 2;
   display: block;
   transition: stroke var(--transition), filter var(--transition);
@@ -282,15 +283,13 @@ hr {
 
 .comment-btn:hover svg {
   stroke: var(--accent);
-  filter: drop-shadow(0 0 5px var(--accent));
+  filter: drop-shadow(0 0 5px var(--accent-glow));
 }
 
-/* Animazione al click */
 .comment-btn:active {
   transform: scale(0.9);
 }
 
-/* Conteggi */
 .like-count,
 .comment-count {
   font-size: 0.85rem;
@@ -299,8 +298,8 @@ hr {
   min-width: 1ch;
 }
 .like-btn.liked svg {
-  fill: var(--accent); /* Il tuo viola */
-  filter: drop-shadow(0 0 5px var(--accent));
+  fill: var(--accent);
+  filter: drop-shadow(0 0 5px var(--accent-glow));
 }
 @media (max-width: 600px) {
   .post-cover {

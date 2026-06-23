@@ -17,7 +17,7 @@
     background: var(--surface);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(43, 37, 32, 0.12);
 }
 
 .leaderboard-table {
@@ -27,25 +27,24 @@
 }
 
 .leaderboard-table th {
-    background: rgba(138, 43, 226, 0.1);
+    background: rgba(201, 162, 39, 0.1);
     padding: 1.2rem;
-    color: var(--accent);
+    color: var(--accent-dim);
     font-size: 0.85rem;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #ece4d3;
 }
 
 .leaderboard-table td {
     padding: 1rem 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #ece4d3;
     transition: background 0.3s ease;
 }
 
 .leaderboard-table tr:hover td {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(201, 162, 39, 0.04);
 }
 
-/* Stilizzazione Posizioni */
 .pos-cell span {
     display: inline-block;
     width: 30px;
@@ -53,9 +52,10 @@
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
+    background: #f5efe2;
     font-weight: bold;
     font-size: 0.9rem;
+    color: var(--text);
 }
 
 .user-cell {
@@ -64,11 +64,11 @@
 }
 
 .token-cell {
-    color: var(--accent);
+    color: var(--accent-dim);
     font-weight: 700;
-    font-family: 'Courier New', Courier, monospace; /* Look più tech/monetario */
+    font-family: 'Courier New', Courier, monospace;
 }
-/* Avatar nella classifica */
+
 .avatar {
     width: 32px;
     height: 32px;
@@ -76,10 +76,9 @@
     object-fit: cover;
     vertical-align: middle;
     margin-right: 10px;
-    border: 1px solid rgba(138, 43, 226, 0.3); /* Bordino viola sottile */
+    border: 1px solid rgba(201, 162, 39, 0.3);
 }
 
-/* Link all'utente */
 .user-cell a {
     color: var(--text);
     text-decoration: none;
@@ -87,10 +86,9 @@
 }
 
 .user-cell a:hover {
-    color: var(--accent);
+    color: var(--accent-dim);
 }
 
-/* Allineamento celle */
 .user-cell {
     display: flex;
     align-items: center;
@@ -100,24 +98,22 @@
     opacity: 0.7;
 }
 
-/* Colori del Podio */
-.rank-gold .pos-cell span { 
-    background: linear-gradient(45deg, #ffd700, #ffae00); 
-    color: #000;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+.rank-gold .pos-cell span {
+    background: linear-gradient(45deg, #ffd700, #ffae00);
+    color: #2b2520;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
-.rank-silver .pos-cell span { 
-    background: linear-gradient(45deg, #c0c0c0, #8e8e8e); 
-    color: #000;
+.rank-silver .pos-cell span {
+    background: linear-gradient(45deg, #d8d8d8, #aaaaaa);
+    color: #2b2520;
 }
 
-.rank-bronze .pos-cell span { 
-    background: linear-gradient(45deg, #cd7f32, #a0522d); 
-    color: #000;
+.rank-bronze .pos-cell span {
+    background: linear-gradient(45deg, #cd7f32, #a0522d);
+    color: #fffaf0;
 }
 
-/* Animazione di entrata per le righe */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
